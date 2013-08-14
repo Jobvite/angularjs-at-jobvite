@@ -21,8 +21,6 @@
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<link rel="stylesheet" href="lib/css/animate.min.css">
-
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
 			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
@@ -222,18 +220,18 @@ angular.directive('pane', function() {
 					<section>
 						<h2>Demo Time</h2>
 						<div ng-controller="Animations">
-							<a ng-click="hideShow('bounce')" class="pane-wrapper">
-								<pane ng-show="panes.bounce" ng-animate="{show: 'animated bounceIn', hide: 'animated bounceOut'}">
-									Bounce
+							<a ng-click="hideShow('fade')" class="pane-wrapper">
+								<pane ng-show="panes.fade" class="fade">
+									Fade
 								</pane>
 							</a>
 							<a ng-click="hideShow('rotate')" class="pane-wrapper">
-								<pane ng-show="panes.rotate" ng-animate="{show: 'animated rotateIn', hide: 'animated rotateOut'}">
+								<pane ng-show="panes.rotate" class="animated rotate">
 									Rotate
 								</pane>
 							</a>
 							<a ng-click="hideShow('good')" class="pane-wrapper">
-								<pane ng-show="panes.good" ng-animate="{show: 'animated rollIn', hide: 'animated hinge'}">
+								<pane ng-show="panes.good" class="animated good">
 									Good++
 								</pane>
 							</a>
@@ -242,14 +240,23 @@ angular.directive('pane', function() {
 					<section>
 						<h2>View the Source, Luke</h2>
 						<pre><code data-trim class="html">
-&lt;pane ng-show="panes.bounce"
-	ng-animate="{show: 'animated bounceIn', hide: 'animated bounceOut'}"&gt;...&lt;/pane&gt;
-
-&lt;pane ng-show="panes.rotate"
-	ng-animate="{show: 'animated rotateIn', hide: 'animated rotateOut'}"&gt;...&lt;/pane&gt;
-
-&lt;pane ng-show="panes.good"
-	ng-animate="{show: 'animated rollIn', hide: 'animated hinge'}"&gt;...&lt;/pane&gt;
+&lt;pane ng-show="panes.fade" class="fade"&gt;...&lt;/pane&gt;
+						</code></pre>
+						<pre><code data-trim class="css">
+.fade.ng-hide-add, .fade.ng-hide-remove {
+	transition:opacity 0.5s;
+	display: block!important;
+}
+ 
+.fade.ng-hide-add,
+.fade.ng-hide-remove.ng-hide-remove-active {
+	opacity:1;
+}
+ 
+.fade.ng-hide-add.ng-hide-add-active,
+.fade.ng-hide-remove {
+	opacity:0;
+}
 						</code></pre>
 					</section>
 				</section>
@@ -278,7 +285,8 @@ angular.directive('pane', function() {
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular.min.js"></script>
+		<script src="http://code.angularjs.org/1.2.0rc1/angular-animate.min.js"></script>
 		<script src="js/angular.js"></script>
 
 		<script>

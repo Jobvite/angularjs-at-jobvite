@@ -1,4 +1,4 @@
-angular.module('Slides', [])
+angular.module('Slides', ['ngAnimate'])
 
 .controller('NoDomGlue', function($scope) {
 
