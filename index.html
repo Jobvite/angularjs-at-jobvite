@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en" ng-app="Slides">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>AngularJS at Jobvite</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+		<link rel="stylesheet" href="css/theme.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<link rel="stylesheet" href="lib/css/animate.min.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>
+						Angular<span class="highlight">JS</span>
+					</h1>
+					<h3>at</h3>
+					<h1>
+						<font color="#d9d9d9" style="font-size: 112px;">Jobvite</font>
+					</h1>
+				</section>
+				<section>
+					<h1>
+						Why Do We Use Angular<span class="highlight">JS</span>?
+					</h1>
+				</section>
+				<section>
+					<h1>It Saves <span class="good-highlight">Time</span>
+					</h1>
+					<p data-fragment-index="0" class="fragment">
+						Switching from just jQuery, our dev time has been cut nearly in half!
+					</p>
+					<p data-fragment-index="1" class="fragment">
+						<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/chrisjaure/images/37351/awesome.gif">
+					</p>
+				</section>
+				<section>
+					<h1>Because It's a <span class="good-highlight">Framework</span>, Not a <span class="bad-highlight">Library</span>
+					</h1>
+					<div data-fragment-index="0" class="fragment">
+						No offense jQuery. We still like you.
+					</div>
+					<div data-fragment-index="1" class="fragment">
+						(Sort of.)
+					</div>
+				</section>
+				<section>
+					<h1>And We Can Work On <span class="good-highlight">Problems</span>, Not <span class="bad-highlight">Boilerplate</span>
+					</h1>
+					<div class="fragment" data-fragment-index="0">
+						Mo' problems, less boilerplate!
+					</div>
+				</section>
+				<section data-background-image="https://s3.amazonaws.com/media-p.slid.es/uploads/chrisjaure/images/37366/34222752.jpg" data-background-size="contain">
+				</section>
+				<section>
+					<h1 class="absolute-element" style="position: absolute; width: 968px; height: 203px; z-index: 5; left: -2px; top: 226px;">What's <span class="bad-highlight">Not</span> So Good About It?</h1>
+					<div class="absolute-element fragment" style="position: absolute; width: 273px; height: 48px; z-index: 6; left: 62px; top: 50px;">
+						Documentation :(((
+					</div>
+					<div class="absolute-element fragment" style="position: absolute; width: 357px; height: 48px; z-index: 10; left: 69px; top: 517px;">
+						Few community plugins.
+					</div>
+					<div class="absolute-element fragment" style="position: absolute; width: 462px; height: 48px; z-index: 7; left: 403px; top: 130px;">
+						Best practices are still emerging.
+					</div>
+					<div class="absolute-element fragment" style="position: absolute; width: 361px; height: 48px; z-index: 8; left: 503px; top: 467px;">
+						There is a learning curve.
+					</div>
+					<div class="absolute-element fragment" style="position: absolute; width: 563px; height: 48px; z-index: 9; left: 286px; top: 605px;">
+						No deployment solution for large apps.
+					</div>
+				</section>
+				<section data-background-image="https://s3.amazonaws.com/media-p.slid.es/uploads/chrisjaure/images/37355/tumblr_m0ttmnjJfL1ro09hco1_1280.jpg" data-background-size="contain">
+				</section>
+				<section>
+					<section>
+						<h1 class="absolute-element" style="position: absolute; width: 968px; height: 203px; z-index: 4; left: 0px; top: 220px;">What's So <font color="#ff9900">Good</font> About It Then?</h1>
+						<div class="absolute-element fragment" style="position: absolute; width: 527px; height: 47px; z-index: 4; left: 401px; top: 146px;">
+							Encourages separation of concerns.
+						</div>
+						<div class="absolute-element fragment" style="position: absolute; width: 322px; height: 48px; z-index: 4; left: 56px; top: 89px;">
+							Dependency injection.
+						</div>
+						<div class="absolute-element fragment" style="position: absolute; width: 225px; height: 48px; z-index: 4; left: 454px; top: 43px;">
+							Testing is EASY!
+						</div>
+						<div class="absolute-element fragment" style="position: absolute; width: 437px; height: 48px; z-index: 5; left: 280px; top: 569px;">
+							Don't need to write DOM glue.
+						</div>
+						<div class="absolute-element fragment" style="position: absolute; width: 440px; height: 48px; z-index: 7; left: 74px; top: 475px;">
+							Declarative like HTML and CSS.
+						</div>
+					</section>
+					<section>
+						<h2>Separation of Concerns</h2>
+						<pre class="fragment"><code data-trim class="javascript">
+angular.controller('MyController', function($scope){
+	// View logic
+});
+						</code></pre>
+						<pre class="fragment"><code data-trim class="javascript">
+angular.factory('MyService', function(){
+	// Reusable logic
+});
+						</code></pre>
+						<pre class="fragment"><code data-trim class="javascript">
+angular.directive('MyDirective', function(){
+	// DOM logic
+});
+						</code></pre>
+					</section>
+					<section>
+						<h2>Dependency Injection</h2>
+						<pre><code data-trim class="javascript">
+angular.factory('BiznizLogic', function(){
+	return function(a, b) {
+		return a + b;
+	};
+});
+angular.controller('MyController', function($scope, BiznizLogic){
+	$scope.aValue = BiznizLogic(1, 2);
+});
+						</code></pre>
+					</section>
+					<section>
+						<h2>Easy Testing</h2>
+						<pre><code data-trim class="javascript">
+describe('MyController', function(){
+
+	it('should call BiznizLogic', inject(function($controller){
+		var spy = jasmine.createSpy('BiznizLogic spy');
+		$controller('MyController', { BiznizLogic:  spy});
+		expect(spy).toHaveBeenCalled();
+	}));
+
+});
+						</code></pre>
+					</section>
+					<section>
+						<h2>No DOM Glue</h2>
+						<div ng-controller="NoDomGlue">
+							<input type="text" ng-model="input">
+							<p>{{ input }}</p>
+						</div>
+						<pre><code data-trim ng-non-bindable class="html">
+&lt;div ng-controller="NoDomGlue"&gt;
+	&lt;input type="text" ng-model="input"&gt;
+	&lt;p&gt;{{ input }}&lt;/p&gt;
+&lt;/div&gt;
+						</code></pre>
+						<pre><code data-trim class="javascript">
+angular.controller('NoDomGlue', function($scope) {
+	$scope.input = "Initial value";
+});
+						</code></pre>
+					</section>
+					<section>
+						<h2>Declarative</h2>
+						<div ng-controller="Declarative">
+							<a ng-click="togglePane()">Toggle Pane</a>
+							<pane ng-show="isPaneVisible">My Pane</pane>
+						</div>
+						<pre><code data-trim class="html">
+&lt;div ng-controller="Declarative"&gt;
+	&lt;a ng-click="togglePane()"&gt;Toggle Pane&lt;/a&gt;
+	&lt;pane ng-show="isPaneVisible"&gt;My Pane&lt;/pane&gt;
+&lt;/div&gt;
+						</code></pre>
+						<pre><code data-trim class="javascript">
+angular.directive('pane', function() {
+	return {
+		restrict: 'E',
+		template: '&lt;div class="pane" ng-transclude&gt; \
+			   &lt;div class="pane-inner" ng-transclude&gt; \
+			   &lt;/div&gt;&lt;/div&gt;',
+		replace: true,
+		transclude: true
+	};
+});
+						</code></pre>
+					</section>
+				</section>
+				<section data-background-image="https://s3.amazonaws.com/media-p.slid.es/uploads/chrisjaure/images/37356/calvin-trex.jpg" data-background-size="contain">
+				</section>
+				<section>
+					<section data-background-size="cover">
+						<h1>What's <span class="good-highlight">Totally Awesome</span> About It?</h1>
+						<h1 class="fragment" data-fragment-index="0">
+							<a href="http://www.yearofmoo.com/2013/04/animation-in-angularjs.html">ANIMATIONS</a>
+						</h1>
+					</section>
+					<section>
+						<h2>Demo Time</h2>
+						<div ng-controller="Animations">
+							<a ng-click="hideShow('bounce')" class="pane-wrapper">
+								<pane ng-show="panes.bounce" ng-animate="{show: 'animated bounceIn', hide: 'animated bounceOut'}">
+									Bounce
+								</pane>
+							</a>
+							<a ng-click="hideShow('rotate')" class="pane-wrapper">
+								<pane ng-show="panes.rotate" ng-animate="{show: 'animated rotateIn', hide: 'animated rotateOut'}">
+									Rotate
+								</pane>
+							</a>
+							<a ng-click="hideShow('good')" class="pane-wrapper">
+								<pane ng-show="panes.good" ng-animate="{show: 'animated rollIn', hide: 'animated hinge'}">
+									Good++
+								</pane>
+							</a>
+						</div>
+					</section>
+					<section>
+						<h2>View the Source, Luke</h2>
+						<pre><code data-trim class="html">
+&lt;pane ng-show="panes.bounce"
+	ng-animate="{show: 'animated bounceIn', hide: 'animated bounceOut'}"&gt;...&lt;/pane&gt;
+
+&lt;pane ng-show="panes.rotate"
+	ng-animate="{show: 'animated rotateIn', hide: 'animated rotateOut'}"&gt;...&lt;/pane&gt;
+
+&lt;pane ng-show="panes.good"
+	ng-animate="{show: 'animated rollIn', hide: 'animated hinge'}"&gt;...&lt;/pane&gt;
+						</code></pre>
+					</section>
+				</section>
+				<section>
+					<h1>Angular<span class="highlight">JS</span>
+					</h1>
+					<h1>
+						+
+						<br>
+						Jobvite
+						<br>
+						=
+						<br>
+						<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/chrisjaure/images/37368/code-09.gif">
+					</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+		<script src="js/angular.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				rollingLinks: false,
+				maxScale: 2.0,
+				minScale: 1.0,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					// { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					// { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
